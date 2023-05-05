@@ -1,3 +1,17 @@
+<script>
+  let activeSections = [];
+
+  function toggleSection(index) {
+    const isActive = activeSections.includes(index);
+    if (isActive) {
+      activeSections = activeSections.filter((x) => x !== index);
+    } else {
+      activeSections = [...activeSections, index];
+    }
+    console.log(activeSections);
+  }
+</script>
+
 <style>
     h2 {
       margin-top: 2rem;
@@ -17,6 +31,18 @@
     h3 {
       font-size: 1.25rem;
     }
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  .info {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
   }
 
   @media (max-width: 768px) {
@@ -47,9 +73,15 @@
 <section id="planning">
     <h2>I. Planning</h2>
     <h3 id="benchmark">A. Benchmark</h3>
-    <p>Assess the sustainability of your website and compare it with competitor sites.</p>
+    <p on:click={() => toggleSection(0)} class:active={activeSections.includes(0)}>Assess the sustainability of your website and compare it with competitor sites.</p>
+    <div class={activeSections.includes(0) ? 'info' : 'hidden'}>
+      In-depth explanation and examples for section I.A. Benchmark...
+    </div>  
     <h3 id="theoretical-possibility">B. Theoretical Possibility</h3>
-    <p>Determine the best possible metrics for your website under ideal conditions.</p>
+    <p on:click={() => toggleSection(1)} class:active={activeSections.includes(1)}>Determine the best possible metrics for your website under ideal conditions.</p>
+    <div class={activeSections.includes(1) ? 'info' : 'hidden'}>
+      In-depth explanation and examples for section I.B. Theoretical Possibility...
+    </div>  
     <h3 id="sustainability-budget">C. Sustainability Budget</h3>
     <p>Set sustainability goals that are achievable and at least on par with industry standards. If there's potential for significant improvement, aim for a higher sustainability budget.</p>
     <h3 id="stretch-goals">D. Stretch Goals</h3>
