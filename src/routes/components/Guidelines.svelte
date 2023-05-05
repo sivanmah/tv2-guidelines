@@ -1,4 +1,6 @@
 <script>
+	import Badge from './Badge.svelte';
+
 	let activeSections = [];
 
 	function toggleSection(index) {
@@ -292,7 +294,6 @@
 			>
 		</p>
 	</div>
-
 	<h3 id="data-center">B. Data Center</h3>
 	<p on:click={() => toggleSection(20)} class:active={activeSections.includes(20)}>
 		<span class={activeSections.includes(20) ? 'arrow down' : 'arrow up'} />Select a data center
@@ -306,6 +307,7 @@
 		</p>
 	</div>
 </section>
+<Badge />
 
 <style>
 	h2 {
