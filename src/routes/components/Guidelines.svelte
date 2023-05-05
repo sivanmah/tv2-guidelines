@@ -8,41 +8,6 @@
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
     }
-
-    @media (max-width: 1024px) {
-    h2 {
-      font-size: 1.5rem;
-    }
-
-    h3 {
-      font-size: 1.25rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    h2 {
-      font-size: 1.25rem;
-      margin-top: 1.5rem;
-    }
-
-    h3 {
-      font-size: 1.125rem;
-      margin-top: 1.25rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    h2 {
-      font-size: 1rem;
-      margin-top: 1rem;
-    }
-
-    h3 {
-      font-size: 0.875rem;
-      margin-top: 1rem;
-    }
-  }
-
   </style>
 <section id="planning">
     <h2>I. Planning</h2>
