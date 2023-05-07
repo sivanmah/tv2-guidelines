@@ -383,6 +383,10 @@
 			font-size: 1.125rem;
 			margin-top: 1.25rem;
 		}
+
+		#planning {
+			margin-top: 3rem;
+		}
 	}
 
 	@media (max-width: 480px) {
