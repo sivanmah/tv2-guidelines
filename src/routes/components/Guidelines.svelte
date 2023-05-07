@@ -320,16 +320,6 @@
 		margin-bottom: 0.5rem;
 	}
 
-	@media (max-width: 1024px) {
-		h2 {
-			font-size: 1.5rem;
-		}
-
-		h3 {
-			font-size: 1.25rem;
-		}
-	}
-
 	.hidden {
 		display: none;
 	}
@@ -363,6 +353,7 @@
 	h3 ~ p {
 		cursor: pointer;
 		margin-bottom: 0.5rem;
+		display: inline-block;
 	}
 
 	h3 ~ p:hover {
@@ -371,6 +362,20 @@
 
 	.bold {
 		font-weight: bold;
+	}
+
+	a {
+		color: #00aa00;
+	}
+
+	@media (max-width: 1024px) {
+		h2 {
+			font-size: 1.5rem;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+		}
 	}
 
 	@media (max-width: 768px) {
