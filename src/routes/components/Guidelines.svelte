@@ -123,11 +123,23 @@
 	<h3 id="images">A. Images</h3>
 	<p on:click={() => toggleSection(7)} class:active={activeSections.includes(7)}>
 		<span class={activeSections.includes(7) ? 'arrow down' : 'arrow up'} />1. File Type: Use WEBP
-		instead of JPEG for 30% smaller file size. Use PNG or GIF for images with few block colors, like
-		icons.
+		instead of JPEG for a much smaller file size. Use PNG or GIF for images with few block colors,
+		like icons.
 	</p>
 	<div class={activeSections.includes(7) ? 'info' : 'hidden'}>
-		<p>In-depth explanation and examples for section I.A. Benchmark...</p>
+		<div class="image-container">
+			<div>
+				<img src="images/waterfall.jpg" alt="Waterfall in JPEG format" />
+				<p>A photograph in the JPEG format. It's size is 240 KB.</p>
+			</div>
+			<div>
+				<img src="images/waterfall.webp" alt="Waterfall in WEBP format" />
+				<p>Here is the same photograph, but converted to WEBp. It's size is 148KB.</p>
+			</div>
+		</div>
+		<p>
+			The WEBP image is 40% smaller, and as you can it does so without decreasing the image quality
+		</p>
 	</div>
 
 	<p on:click={() => toggleSection(21)} class:active={activeSections.includes(21)}>
@@ -146,8 +158,25 @@
 		<p>
 			This allows you to display different images based on the needs of the user. So that for
 			example a mobile user will not be downloading a large image that is only needed for desktop
-			users.
+			users. The following image is a picture element that will display a different image based on
+			the screen size. Try resizing your browser to see the different images.
 		</p>
+
+		<picture class="srcset-image">
+			<source
+				srcset="/images/small.webp"
+				media="(max-width: 480px)"
+				type="image/webp"
+				alt="Pillars of creation"
+			/>
+			<source
+				srcset="/images/medium.webp"
+				media="(max-width: 768px)"
+				type="image/webp"
+				alt="Cliffside castle"
+			/>
+			<img src="/images/large.webp" alt="Greek shores" />
+		</picture>
 	</div>
 
 	<p on:click={() => toggleSection(9)} class:active={activeSections.includes(9)}>
@@ -335,7 +364,7 @@
 		color: #fff;
 		padding: 1rem;
 		border-radius: 0.5rem;
-		margin: 0.5rem 0;
+		margin: 0.5rem 10rem 0 0;
 	}
 
 	.arrow {
@@ -360,6 +389,7 @@
 		cursor: pointer;
 		margin-bottom: 0.5rem;
 		display: inline-block;
+		margin-right: 3rem;
 	}
 
 	h3 ~ p:hover {
@@ -374,6 +404,27 @@
 		color: #00aa00;
 	}
 
+	.image-container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.image-container img {
+		width: 90%;
+	}
+
+	.image-container p {
+		width: 90%;
+		margin-top: 0.5rem;
+		text-align: center;
+	}
+
+	.srcset-image img {
+		width: 60%;
+		display: flex;
+		margin: 0 auto;
+	}
+
 	@media (max-width: 1024px) {
 		h2 {
 			font-size: 1.5rem;
@@ -381,6 +432,10 @@
 
 		h3 {
 			font-size: 1.25rem;
+		}
+
+		.info {
+			margin: 0.5rem 2rem 0 0;
 		}
 	}
 
@@ -395,8 +450,21 @@
 			margin-top: 1.25rem;
 		}
 
+		.info {
+			margin: 0.5rem 1rem 0 0;
+		}
+
 		#planning {
 			margin-top: 3rem;
+		}
+
+		.image-container {
+			flex-direction: column;
+		}
+
+		.image-container img {
+			width: 100%;
+			margin-bottom: 1rem;
 		}
 	}
 
@@ -409,6 +477,10 @@
 		h3 {
 			font-size: 0.875rem;
 			margin-top: 1rem;
+		}
+
+		h3 ~ p {
+			margin-right: 0;
 		}
 	}
 </style>
