@@ -289,7 +289,7 @@
 	<div class={activeSections.includes(19) ? 'info' : 'hidden'}>
 		<p>
 			There are many hosting providers that use green energy. Some of them are listed here:
-			<a href="https://www.thegreenwebfoundation.org/directory/"
+			<a href="https://www.thegreenwebfoundation.org/directory/" target="_blank"
 				>https://www.thegreenwebfoundation.org/directory/</a
 			>
 		</p>
