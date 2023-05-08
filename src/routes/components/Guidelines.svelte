@@ -14,6 +14,12 @@
 	}
 </script>
 
+<h1>Sustainability Guidelines for TV2 Websites</h1>
+<p>
+	This document outlines strategies to enhance sustainability across various aspects of your
+	website, including planning, design, user experience, content optimization, power consumption, and
+	hosting.
+</p>
 <section id="planning">
 	<h2>I. Planning</h2>
 	<h3 id="benchmark">A. Benchmark</h3>

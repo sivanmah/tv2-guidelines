@@ -3,6 +3,10 @@
 	import Guidelines from './components/Guidelines.svelte';
 </script>
 
+<svelte:head>
+	<title>Web Sustainability Guidelines</title>
+</svelte:head>
+
 <div class="container">
 	<div class="navbar">
 		<Navbar />
