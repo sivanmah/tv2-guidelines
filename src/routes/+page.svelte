@@ -1,6 +1,6 @@
 <script>
-	import Navbar from './components/Navbar.svelte';
-	import Guidelines from './components/Guidelines.svelte';
+	import Navbar from './components/Navbar/Navbar.svelte';
+	import Guidelines from './components/Guidelines/Guidelines.svelte';
 </script>
 
 <svelte:head>
