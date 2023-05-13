@@ -1,6 +1,7 @@
 <script>
 	import Navbar from './components/Navbar/Navbar.svelte';
 	import Guidelines from './components/Guidelines/Guidelines.svelte';
+	import Calculator from './components/Calculator/Calculator.svelte';
 </script>
 
 <svelte:head>
@@ -13,6 +14,9 @@
 	</div>
 	<div class="content">
 		<Guidelines />
+	</div>
+	<div class="calculator">
+		<Calculator />
 	</div>
 </div>
 
