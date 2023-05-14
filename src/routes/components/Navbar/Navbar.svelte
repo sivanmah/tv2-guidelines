@@ -1,6 +1,7 @@
 <script>
 	import { Hamburger } from 'svelte-hamburgers';
 
+
 	let open = false;
 	$: if (open) {
 		console.log('open');
@@ -55,6 +56,7 @@
 	<li class="h3-title" on:click={() => scrollToSection('green-host')}>A. Green Host</li>
 	<li class="h3-title" on:click={() => scrollToSection('data-center')}>B. Data Center</li>
 </ul>
+
 <div class="hamburger-menu">
 	<Hamburger bind:open --color="white" />
 </div>

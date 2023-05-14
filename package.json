@@ -22,6 +22,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@tgwf/co2": "^0.13.2",
 		"svelte-hamburgers": "^4.0.1"
 	}
 }
