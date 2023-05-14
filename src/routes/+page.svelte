@@ -16,7 +16,7 @@
 		<Guidelines />
 	</div>
 	<div class="calculator">
-		<Calculator />
+		<a href="/CO2">Calculator</a>
 	</div>
 </div>
 
