@@ -3,3 +3,9 @@
 </script>
 
 <Calculator />
+
+<style>
+	Calculator {
+		margin: auto;
+	}
+</style>

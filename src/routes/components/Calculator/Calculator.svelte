@@ -44,45 +44,55 @@
 	}
 </script>
 
-<div>
-	<h1>Calculate CO2 Emissions</h1>
-	<p>
-		Bytes Sent: <input type="text" bind:value={bytesSentMB} on:input={handleBytesSentChange} /> MB
-	</p>
-	<p>
-		Page Views: <input type="text" bind:value={pageViews} on:input={handlePageViewsChange} />
-	</p>
-	<p>
-		<label>
-			<input type="radio" bind:group={greenHost} value={false} />
-			Data transferred from a non-green host
-		</label>
-	</p>
-	<p>
-		<label>
-			<input type="radio" bind:group={greenHost} value={true} />
-			Data transferred from a green host
-		</label>
-	</p>
-	<p>
-		<label>
-			<input type="radio" bind:group={emissionUnit} value="grams" />
-			CO2 Emissions in grams
-		</label>
-	</p>
-	<p>
-		<label>
-			<input type="radio" bind:group={emissionUnit} value="tons" />
-			CO2 Emissions in tons
-		</label>
-	</p>
-	<p>
-		<button on:click={calculateCO2}>Calculate</button>
-	</p>
-	{#if estimatedCO2 !== null}
-		<p>
-			Sending {bytesSentMB || '0'} MB of data had a carbon footprint of {estimatedCO2.toFixed(3)}
-			{emissionUnit === 'tons' ? 'tons' : 'grams'} of CO2
-		</p>
-	{/if}
+<div class="calc-navbar">
+    <a href="/">Guidelines</a>
 </div>
+
+<div class="calc-container">
+	<div>
+    <h1>Calculate CO2 Emissions</h1>
+    <p>
+        Data Amount: <input type="text" bind:value={bytesSentMB} on:input={handleBytesSentChange} /> MB
+    </p>
+    <p>
+        Page Views: <input type="text" bind:value={pageViews} on:input={handlePageViewsChange} />
+    </p>
+    <p>
+        <label>
+            <input type="radio" bind:group={greenHost} value={false} />
+            Data transferred from a non-green host
+        </label>
+    </p>
+    <p>
+        <label>
+            <input type="radio" bind:group={greenHost} value={true} />
+            Data transferred from a green host
+        </label>
+    </p>
+    <p>
+        <label>
+            <input type="radio" bind:group={emissionUnit} value="grams" />
+            CO2 Emissions in grams
+        </label>
+    </p>
+    <p>
+        <label>
+            <input type="radio" bind:group={emissionUnit} value="tons" />
+            CO2 Emissions in tons
+        </label>
+    </p>
+    <p>
+        <button on:click={calculateCO2}>Calculate</button>
+    </p>
+    {#if estimatedCO2 !== null}
+        <p>
+            Sending {bytesSentMB || '0'} MB of data had a carbon footprint of {estimatedCO2.toFixed(3)}
+            {emissionUnit === 'tons' ? 'tons' : 'grams'} of CO2
+        </p>
+    {/if}
+	</div>
+</div>
+
+<style>
+	@import './Calculator.css';
+</style>
