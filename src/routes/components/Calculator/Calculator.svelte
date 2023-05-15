@@ -1,5 +1,4 @@
 <script>
-    import tgwf from 'https://cdn.skypack.dev/@tgwf/co2';
 	import { co2 } from '@tgwf/co2';
 	import { onMount } from 'svelte';
     
