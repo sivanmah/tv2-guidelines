@@ -233,13 +233,10 @@
 		</p>
 	</div>
 
-	<p on:click={() => toggleSection(13)} class:active={activeSections.includes(13)}>
-		<span class={activeSections.includes(13) ? 'arrow down' : 'arrow up'} />3. Font Files: Remove
-		unneeded files and use variable fonts for multiple font styles. Convert files to WOFF2 format.
+	<p>
+		3. Font Files: Remove unneeded files and use variable fonts for multiple font styles. Convert
+		files to WOFF2 format.
 	</p>
-	<div class={activeSections.includes(13) ? 'info' : 'hidden'}>
-		In-depth explanation and examples for section I.A. Benchmark...
-	</div>
 
 	<p on:click={() => toggleSection(14)} class:active={activeSections.includes(14)}>
 		<span class={activeSections.includes(14) ? 'arrow down' : 'arrow up'} />4. Optimization: Use
@@ -275,7 +272,7 @@
 	<h3 id="video">B. Video</h3>
 	<p on:click={() => toggleSection(16)} class:active={activeSections.includes(16)}>
 		<span class={activeSections.includes(16) ? 'arrow down' : 'arrow up'} />Minimize video usage and
-		autoplay. Opt for images, text, or interactive CSS animations when possible.
+		autoplay. Opt for images, text, or interactive animations when possible.
 	</p>
 	<div class={activeSections.includes(16) ? 'info' : 'hidden'}>
 		<p>
