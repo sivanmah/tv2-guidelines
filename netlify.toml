@@ -6,4 +6,4 @@
 
 [credentials]
   # Replace 'YOUR_NPM_USERNAME' and 'YOUR_NPM_PASSWORD' with your actual npm credentials
-  npm_token = { username = "trulstp", password = "1M7man7y6!" }
+  npm_token = { username = "trulstp", token = "npm_zdnY......FKOV" }
