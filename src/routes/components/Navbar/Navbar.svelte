@@ -23,8 +23,11 @@
 	<span />
 	<span />
 </div>
-
+<div>
+	
 <ul class:menu-open={open}>
+	
+	<li><a href="CO2">Data Carbon Calculator</a></li>	
 	<li on:click={() => scrollToSection('planning')}>I. Planning</li>
 	<li class="h3-title" on:click={() => scrollToSection('benchmark')}>A. Benchmark</li>
 	<li class="h3-title" on:click={() => scrollToSection('theoretical-possibility')}>
@@ -56,7 +59,7 @@
 	<li class="h3-title" on:click={() => scrollToSection('green-host')}>A. Green Host</li>
 	<li class="h3-title" on:click={() => scrollToSection('data-center')}>B. Data Center</li>
 </ul>
-
+</div>
 <div class="hamburger-menu">
 	<Hamburger bind:open --color="white" />
 </div>

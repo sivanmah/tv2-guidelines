@@ -1,7 +1,7 @@
 <script>
 	import Navbar from './components/Navbar/Navbar.svelte';
 	import Guidelines from './components/Guidelines/Guidelines.svelte';
-	import Calculator from './components/Calculator/Calculator.svelte';
+	
 </script>
 
 <svelte:head>
@@ -12,12 +12,11 @@
 	<div class="navbar">
 		<Navbar />
 	</div>
+
 	<div class="content">
 		<Guidelines />
 	</div>
-	<div class="calculator">
-		<a href="/CO2">Calculator</a>
-	</div>
+	
 </div>
 
 <style>
