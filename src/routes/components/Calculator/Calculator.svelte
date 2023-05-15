@@ -1,6 +1,8 @@
 <script>
+    import tgwf from 'https://cdn.skypack.dev/@tgwf/co2';
 	import { co2 } from '@tgwf/co2';
 	import { onMount } from 'svelte';
+    
 
 	const co2Emission = new co2();
 
@@ -86,7 +88,7 @@
     </p>
     {#if estimatedCO2 !== null}
         <p>
-            Sending {bytesSentMB || '0'} MB of data had a carbon footprint of {estimatedCO2.toFixed(3)}
+            Sending {bytesSentMB || '0'} MB of data returns a carbon footprint of {estimatedCO2.toFixed(3)}
             {emissionUnit === 'tons' ? 'tons' : 'grams'} of CO2
         </p>
     {/if}
